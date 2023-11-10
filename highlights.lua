@@ -20,13 +20,24 @@ M.override = {
   },
 
   CursorLine = {
-    bg = "#556000",
+    bg = "#333666",
     underline = true,
   },
 
   NvimTreeCursorLine = {
     bg = "#333666",
-    underline = true,
+  },
+
+  TelescopeBorder = {
+    fg = "#888888",
+  },
+
+  IndentBlanklineChar = {
+    fg = "#555555",
+  },
+
+  IndentBlanklineContextChar = {
+    fg = "#aaaaaa",
   },
 }
 

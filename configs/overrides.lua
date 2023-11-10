@@ -1,5 +1,19 @@
 local M = {}
 
+-- for lukas-reineke/indent-blankline.nvim
+M.blankline = {
+  -- I like to see the indent bar at the first level
+  show_first_indent_level = true,
+}
+
+M.telescope = {
+  defaults = {
+    mappings = {
+      -- new mappings
+    }
+  }
+}
+
 M.treesitter = {
   ensure_installed = {
     "vim",
@@ -27,12 +41,20 @@ M.treesitter = {
     "gitcommit",
     "gitignore",
   },
+  -- for lukas-reineke/indent-blankline.nvim
   indent = {
     enable = true,
     -- disable = {
     --   "python"
     -- },
   },
+  -- enable vim-matchup in treesitter
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+    -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
+    -- [options]
+  },
+
 }
 
 M.mason = {
@@ -68,15 +90,16 @@ M.mason = {
     "pyright",
     "flake8",
     "black",
-    -- "mypy",
     "pydocstyle",
     "pylint",
-    -- "pyre",
     "autoflake",
     "autopep8",
 
     -- jq
     "jq-lsp",
+
+    -- json
+    "json-lsp",
   },
 }
 

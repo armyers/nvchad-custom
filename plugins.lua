@@ -24,6 +24,16 @@ local plugins = {
 
   -- override plugin configs
   {
+    "nvim-telescope/telescope.nvim",
+    opts = overrides.telescope,
+  },
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = overrides.blankline,
+  },
+
+  {
     "williamboman/mason.nvim",
     opts = overrides.mason
   },
@@ -68,34 +78,12 @@ local plugins = {
     end
   },
 
-  -- {
-  --   "toppair/peek.nvim",
-  --   build = "deno task --quiet build:fast",
-  --   keys = {
-  --     {
-  --       "<leader>op",
-  --           function()
-  --           local peek = require("peek")
-  --               if peek.is_open() then
-  --           peek.close()
-  --           else
-  --           peek.open()
-  --           end
-  --       end,
-  --       desc = "Peek (Markdown Preview)",
-  --     },
-  --   },
-  --   opts = { theme = "dark", app = "webview" },
-  -- },
-
   {
-    "iamcco/markdown-preview.nvim",
-    cmd = {"MarkdownPreview", "MarkdownPreviewStop"},
+    "andymass/vim-matchup",
     lazy = false,
-    build = function() vim.fn["mkdp#util#install"]() end,
-    init = function()
-        vim.g.mkdp_theme = 'dark'
-    end
+    setup = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
   },
 
   -- To make a plugin not be loaded
