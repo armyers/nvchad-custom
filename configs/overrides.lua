@@ -18,6 +18,7 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
+    "luadoc",
     "html",
     "css",
     "javascript",
@@ -27,6 +28,7 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "terraform",
+    "hcl",
     "bash",
     "yaml",
     "python",
@@ -40,6 +42,9 @@ M.treesitter = {
     "gitattributes",
     "gitcommit",
     "gitignore",
+    "make",
+    "cmake",
+    "diff",
   },
   -- for lukas-reineke/indent-blankline.nvim
   indent = {
@@ -54,7 +59,6 @@ M.treesitter = {
     -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
     -- [options]
   },
-
 }
 
 M.mason = {
